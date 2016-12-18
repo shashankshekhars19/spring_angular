@@ -3,10 +3,10 @@ ang.config([ '$routeProvider', function($routeProvider) {
 	$routeProvider.when("/main", {
 		templateUrl : "app/partials/main.html",
 		controller : "mainController"
-	})/*.when("/subs", {
-		templateUrl : "partials/subs.html",
+	}).when("/subs", {
+		templateUrl : "app/partials/side.html"/*,
 		controller : "subController"
-	})*/.otherwise({
+*/	}).otherwise({
 		redirectTo : '/main'
 	});
 } ]);

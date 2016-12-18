@@ -1,13 +1,15 @@
-var ang = angular.module("mainApp");
+  
+    angular.module('mainApp')
+    .controller('TabctrlController', ['$scope', function($scope) {
+      $scope.tab = 1;
 
-    ang.controller('TabctrlController', function ($scope) {
-        $scope.activeTab = 1;
+      $scope.setTab = function(newTab){
+    	
+        $scope.tab = newTab;
+        console.log($scope.tab);
+      };
 
-        this.setActiveTab = function (tabId) {
-        	$scope.activeTab = tabId;
-        };
-
-        this.isSet = function (tabId) {
-            return $scope.activeTab === tabId;
-        };
-    });
+      $scope.isSet = function(tabNum){
+        return $scope.tab === tabNum;
+      };
+  }]);
